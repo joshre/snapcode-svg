@@ -1,0 +1,60 @@
+// -----------------------------------------------------------------------------
+// Color one in the pallete
+// -----------------------------------------------------------------------------
+
+// $gray: (
+// 	faded: 			#000000,
+// 	main: 			#83A8BC,
+// 	dark: 			#5F7687
+// );
+$blue: (
+	main:	#39474f,
+	dark:	#2b3c54,
+	links:	#2185d5,
+	gray: 	#303842,
+);
+$gray: (
+	border: #DEDEDE,
+	dark:	#424242,
+	light: #7b8994,
+	lightest: #E8EDF2,
+);
+$accent: (
+	main: #f3f3f3,
+);
+$pink: (
+	main: #fc3476,
+);
+
+$accent-color: map-get($accent, main);
+$second-accent: map-get($blue, links);
+$dark-large: map-get($blue, gray);
+
+// -----------------------------------------------------------------------------
+// Social Icons
+// -----------------------------------------------------------------------------
+$social: (
+	twitter: 		#78cdf0,
+	facebook: 		#537bbd,
+	instagram: 		#517fa4,
+	youtube: 		#d34836,
+	snapchat: 		#fffc00,
+	pinterest:		#cb2027,
+	google: 		#dd4b39
+);
+
+
+// $dark-gray: map-get($gray, dark);
+// $medium-gray: map-get($gray, main);
+// $light-gray: map-get($gray, light);
+
+// $base-font-color: $dark-gray;
+
+$action-color: map-get($blue, main);
+
+$base-border-color: map-get($gray, border);
+
+// $base-background-color: #fff;
+// $secondary-background-color: tint($base-border-color, 75%);
+
+$base-link-color: map-get($blue, links);

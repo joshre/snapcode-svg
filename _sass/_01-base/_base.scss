@@ -1,0 +1,75 @@
+body {
+    overflow-x: hidden;
+    justify-content:space-between;
+    @include media($screen-xs){}
+    // @include media($screen-sm){justify-content: center;}
+    @include media($screen-md){}
+    @include media($screen-lg){}
+    @include media($screen-xl){}
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: visible;
+}
+
+main {
+    // display: flex;
+    max-width: 700px;
+    padding: 1em;
+
+    @include media($screen-xs) {
+        padding: 0;
+    }
+
+
+    @include media($screen-md) {
+        padding-top: 10vh;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+iframe {
+    &.has-content {
+        @include size(320px);
+
+        margin-top: 1em;
+    }
+}
+
+#{$all-text-inputs}, input[type=submit] {
+    border: 1px solid #ccc;
+    padding: .5em 1em .5em .5em;
+    border-radius: 3px;
+    font-size: $base-font-size;
+
+    @include media($screen-sm-max) {
+        width: 64%;
+    }
+}
+
+input[type=submit] {
+    background-color: $links;
+
+    @include appearance(none);
+
+    border: none;
+    color: white;
+    padding: .5em 2em;
+
+    @include media($screen-sm-max) {
+        width: 30%;
+        float: right;
+    }
+}
+
+footer {
+    width: 100vw;
+    text-align: center;
+    padding: 1em 0;
+    background-color: #F1F1F1;
+}

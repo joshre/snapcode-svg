@@ -1,0 +1,77 @@
+// ------------------------------------------------------------
+// Neat grid using Omega Reset
+// ------------------------------------------------------------
+@mixin omega-reset($nth) {
+    &:nth-child(#{$nth}) {
+        margin-right: flex-gutter();
+    }
+
+    &:nth-child(#{$nth}+1) {
+        clear: none;
+    }
+}
+
+@mixin border-block($color, $border) {
+    border-bottom: $border solid $color;
+
+    h1, h2, h3, h4, h5, h6 {
+        color: $color;
+        text-transform: capitalize;
+    }
+}
+
+@mixin header-accent($color) {
+    h1, h2, h3, h4, h5, h6 {
+        color: $color;
+    }
+}
+@mixin gradient-text($color1, $color2) {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    @include background-image(linear-gradient(45deg, $color1, $color2));
+}
+
+@mixin st-button($button-color, $text-color: white, $button-type: solid) {
+    @include pad(0.3em 1em);
+
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 2em;
+
+    box-shadow: none;
+    border: 1px solid;
+
+    @include transition(all 0.2s ease-in-out);
+
+    @if $button-type == solid {
+        background-color: $button-color;
+        border-color: $button-color;
+        color: $text-color;
+
+        &:hover, &:focus {
+            background-color: darken($button-color, 5%);
+        }
+
+        &:active {
+            background-color: darken($button-color, 7%);
+        }
+    }
+    @else {
+        background-color: transparent;
+        color: $button-color;
+        border-color: $button-color;
+
+        &:hover, &:focus {
+            background-color: $button-color;
+            color: $text-color;
+        }
+
+        &:active {
+            background-color: $button-color;
+            color: $text-color;
+        }
+    }
+}
+
