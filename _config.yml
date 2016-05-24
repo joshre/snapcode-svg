@@ -9,11 +9,11 @@
 title: Snapcode SVG
 email: joshre@me.com
 description: > # this means to ignore newlines until "baseurl:"
-  Type in your snapchat username and get your snapcode back as an SVG
+  Type in your snapchat username and get your snapcode as an SVG.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://joshre.com/snapcode-svg/" # the base hostname & protocol for your site
+twitter_username: jawshre
+github_username:  joshre
 
 # Build settings
 markdown: kramdown
