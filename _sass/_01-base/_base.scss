@@ -1,7 +1,7 @@
 body {
     overflow-x: hidden;
     justify-content:space-between;
-    @include media($screen-xs){}
+    @include media($screen-xs){height: 100vh;}
     // @include media($screen-sm){justify-content: center;}
     @include media($screen-md){}
     @include media($screen-lg){}
